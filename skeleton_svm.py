@@ -1,5 +1,5 @@
 #################################
-# Your name:
+# Your name: Bar Yaacovi
 #################################
 
 # Please import and use stuff only from the packages numpy, sklearn, matplotlib
@@ -82,6 +82,7 @@ def linear_accuracy_per_C(X_train, y_train, X_val, y_val):
         accuracy_list[i] = cross_validate(X_val, y_val, linear_model)
         accuracy_list_train[i] = cross_validate(X_train, y_train, linear_model)
         # create_plot(X_train, y_train, linear_model,)
+        # plt.title("C = {candidate}".format(candidate=candidate))
         # plt.show()
     plt.xscale('log')
     plt.xlabel('C')
@@ -108,6 +109,7 @@ def rbf_accuracy_per_gamma(X_train, y_train, X_val, y_val):
         accuracy_list[i] = cross_validate(X_val, y_val, rbf_model)
         accuracy_list_train[i] = cross_validate(X_train, y_train, rbf_model)
         # create_plot(X_train, y_train, rbf_model,)
+        # plt.title("gamma = {candidate}".format(candidate=candidate))
         # plt.show()
     plt.xscale('log')
     plt.xlabel('Gamma')
